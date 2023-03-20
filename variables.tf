@@ -1,4 +1,4 @@
-variable "acr_name" {
+variable "name" {
   type        = string
   description = "name of the acr"
 }
@@ -10,7 +10,7 @@ variable "location" {
   type        = string
   description = "location of the acr"
 }
-variable "acr_sku" {
+variable "sku" {
   type        = string
   description = "sku for the acr"
 }
