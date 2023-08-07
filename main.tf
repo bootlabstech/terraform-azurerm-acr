@@ -6,4 +6,9 @@ resource "azurerm_container_registry" "acr" {
   admin_enabled                 = var.admin_enabled
   public_network_access_enabled = var.public_network_access_enabled
   export_policy_enabled         = var.export_policy_enabled
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
 }
