@@ -34,13 +34,13 @@ variable "type" {
   description = "Specifies the type of Managed Service Identity that should be configured on this Container Registry. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both)."
   default     = "SystemAssigned"
 }
-variable "retention_enabled" {
-  type        = bool
-  description = "Boolean value that indicates whether the policy is enabled."
-  default     = true
-}
-variable "retention_days" {
-  type        = number
-  description = "The number of days to retain an untagged manifest after which it gets purged. Default is 7."
-  default     = 7
-}
+# variable "retention_enabled" {
+#   type        = bool
+#   description = "Boolean value that indicates whether the policy is enabled."
+#   default     = true
+# }
+# variable "retention_days" {
+#   type        = number
+#   description = "The number of days to retain an untagged manifest after which it gets purged. Default is 7."
+#   default     = 7
+# }

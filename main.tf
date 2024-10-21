@@ -11,10 +11,10 @@ resource "azurerm_container_registry" "acr" {
   identity {
     type = var.type
   }
-  retention_policy {
-    enabled = var.retention_enabled
-    days    = var.retention_days
-  }
+  # retention_policy {
+  #   enabled = var.retention_enabled
+  #   days    = var.retention_days
+  # }
   lifecycle {
     ignore_changes = [
       tags,
