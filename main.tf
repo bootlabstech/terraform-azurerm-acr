@@ -18,6 +18,8 @@ resource "azurerm_container_registry" "acr" {
   lifecycle {
     ignore_changes = [
       tags,
+      network_rule_set,
+      identity,
     ]
   }
 }
