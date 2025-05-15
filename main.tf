@@ -5,21 +5,5 @@ resource "azurerm_container_registry" "acr" {
   sku                           = var.sku
   admin_enabled                 = var.admin_enabled
   public_network_access_enabled = var.public_network_access_enabled
-  network_rule_set {
-    default_action = var.default_action
-  }
-  identity {
-    type = var.type
-  }
-  # retention_policy {
-  #   enabled = var.retention_enabled
-  #   days    = var.retention_days
-  # }
-  lifecycle {
-    ignore_changes = [
-      tags,
-      network_rule_set,
-      identity,
-    ]
-  }
+  export_policy_enabled         = var.export_policy_enabled
 }
