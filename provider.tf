@@ -12,5 +12,5 @@ provider "azurerm" {
   #   enabled = false
   #   timeout = "2m"
   # }
-  # skip_provider_registration = true
+  skip_provider_registration = true  # this wil be deprecated with 5.0.0 version
 }
