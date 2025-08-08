@@ -2,15 +2,12 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 4.24.0" # Adjust this version as needed
+      version = ">= 4.0.0"
     }
   }
 }
+
 provider "azurerm" {
   features {}
-  # resource_provider_registrations = {
-  #   enabled = false
-  #   timeout = "2m"
-  # }
-  skip_provider_registration = true  # this wil be deprecated with 5.0.0 version
+
 }
